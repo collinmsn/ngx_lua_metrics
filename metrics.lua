@@ -14,7 +14,7 @@ function metrics.init(conf)
 end
 
 function metrics.send(req)
-    local msgpack = require 'cmsgpack'
+    local msgpack = require('cmsgpack')
     msg = msgpack.pack(req)
     udp:send(msg)
 end
